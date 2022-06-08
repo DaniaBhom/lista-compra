@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { EditmercadoriaComponent } from './editmercadoria/editmercadoria.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    EditmercadoriaComponent
   ],
   imports: [
     BrowserModule,
