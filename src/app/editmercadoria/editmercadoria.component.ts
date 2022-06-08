@@ -13,6 +13,14 @@ export class EditmercadoriaComponent implements OnInit {
     quantidadeEstoque: 2,
     quantidadeMinima: 1,
   }
+  salvarMercadoria(){
+    this.mercadoria.push({
+      id:this.mercadoria.id,
+      descricao:this.mercadoria.descricao,
+      quantidadeEstoque:this.mercadoria.quantidadeEstoque,
+      quantidadeMinima:this.mercadoria.quantidadeMinima
+    })
+}
 
   constructor() { }
 
