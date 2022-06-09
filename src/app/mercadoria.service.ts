@@ -13,4 +13,9 @@ export class MercadoriaService {
     return LISTAMERCADORIAS;
   }
 
+  getMercadoria(): Mercadoria{
+    return LISTAMERCADORIAS[0];
 }
+
+}
+

@@ -4,3 +4,4 @@ export class Mercadoria {
   quantidadeEstoque!:number;
   quantidadeMinima!:number;
 }
+

@@ -8,7 +8,7 @@ import { Mercadoria } from '../mercadoria';
   styleUrls: ['./editmercadoria.component.css']
 })
 export class EditmercadoriaComponent implements OnInit {
-  mercadoria!:Mercadoria[];
+  mercadoria!: Mercadoria[];
 
   Mercadoria = {
     id: 4,
@@ -16,8 +16,6 @@ export class EditmercadoriaComponent implements OnInit {
     quantidadeEstoque: 2,
     quantidadeMinima: 1,
   }
-
-
 
    constructor(private mercadoriaService: MercadoriaService) { }
 
