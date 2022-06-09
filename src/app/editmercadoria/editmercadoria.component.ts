@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MercadoriaService } from '../mercadoria.service';
+import { Mercadoria } from '../mercadoria';
 
 @Component({
   selector: 'app-editmercadoria',
@@ -6,25 +8,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editmercadoria.component.css']
 })
 export class EditmercadoriaComponent implements OnInit {
+  mercadoria!:Mercadoria[];
 
-  mercadoria = {
+  Mercadoria = {
     id: 4,
     descricao: "Sal",
     quantidadeEstoque: 2,
     quantidadeMinima: 1,
   }
-  salvarMercadoria(){
-    this.mercadoria.push({
-      id:this.mercadoria.id,
-      descricao:this.mercadoria.descricao,
-      quantidadeEstoque:this.mercadoria.quantidadeEstoque,
-      quantidadeMinima:this.mercadoria.quantidadeMinima
-    })
-}
 
-  constructor() { }
+
+
+   constructor(private mercadoriaService: MercadoriaService) { }
 
   ngOnInit(): void {
+    this.getMercadoria();
+  }
+
+  getMercadoria():void {
+    this.mercadoria = this.mercadoriaService.getMercadorias();
   }
 
 }
